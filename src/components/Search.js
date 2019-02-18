@@ -26,23 +26,34 @@ class Search extends Component {
         const { films } = this.state;
         return (
             <div className="film-search">
-                <form onSubmit={this.handleSubmit}>
-                    <input 
-                        type="text"
-                        placeholder="Enter title of film" 
-                        value={this.state.value} 
-                        onChange={this.handleChange}
-                    />
-                    <input type="submit" value="Search" />
+                <form className="form-inline" onSubmit={this.handleSubmit}>
+                    <div className="form-group">
+                        <input 
+                            type="text"
+                            className="form-control mr-2"
+                            placeholder="Enter title of film" 
+                            value={this.state.value} 
+                            onChange={this.handleChange}
+                        />
+                    </div>
+                    <button type="submit" className="btn btn-primary">Search</button>
                 </form>
-                <ul>
+                <div>
                     {films.map(film => (
-                        <li key={film.id}>
-                            {film.Title}
-                        </li>
+                        <p key={film.imdbID}>
+                            Title: {film.Title}
+                            <img src={film.Poster} className="img-responsive"/>
+                            Released: {film.Released}
+                            Rated: {film.Rated}
+                            Duration: {film.Runtime}
+                            Genre: {film.Genre}
+                            Summary: {film.Plot}
+                            Actors: {film.Actors}
+                            IMDB Rating: {film.imdbRating}
+                         </p>
                     ))}
                     
-                </ul>
+                </div>
             </div>
         )
     }
