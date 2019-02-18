@@ -38,19 +38,21 @@ class Search extends Component {
                     </div>
                     <button type="submit" className="btn btn-primary">Search</button>
                 </form>
-                <div>
+                <div className="row">
                     {films.map(film => (
-                        <p key={film.imdbID}>
-                            Title: {film.Title}
+                        <div className="col-4" key={film.imdbID}>
+                            <h3>{film.Title}</h3>
                             <img src={film.Poster} className="img-responsive"/>
-                            Released: {film.Released}
-                            Rated: {film.Rated}
-                            Duration: {film.Runtime}
-                            Genre: {film.Genre}
-                            Summary: {film.Plot}
-                            Actors: {film.Actors}
-                            IMDB Rating: {film.imdbRating}
-                         </p>
+                            <p>
+                                {film.Released}
+                                {film.Rated}
+                                {film.Runtime}
+                                {film.Genre}
+                                {film.Plot}
+                                {film.Actors}
+                                {film.imdbRating}
+                            </p>
+                         </div>
                     ))}
                     
                 </div>
