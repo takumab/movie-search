@@ -42,15 +42,9 @@ class Search extends Component {
                     {films.map(film => (
                         <div className="col-4" key={film.imdbID}>
                             <h3>{film.Title}</h3>
-                            <img src={film.Poster} className="img-responsive"/>
+                            <img src={film.Poster} />
                             <p>
-                                {film.Released}
-                                {film.Rated}
-                                {film.Runtime}
-                                {film.Genre}
-                                {film.Plot}
-                                {film.Actors}
-                                {film.imdbRating}
+                                {film.Year}
                             </p>
                          </div>
                     ))}
