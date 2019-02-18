@@ -19,13 +19,11 @@ class Search extends Component {
                 films: results.Search
             })
         })
-        alert(this.state.films);
         e.preventDefault();
     }
 
     render() {
         const { films } = this.state;
-        console.log(films);
         return (
             <div className="film-search">
                 <form onSubmit={this.handleSubmit}>
