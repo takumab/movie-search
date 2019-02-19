@@ -17,7 +17,7 @@ $ npm start
 
 To run the test
 ```
-$ npm start
+$ npm test
 ```
 
 
