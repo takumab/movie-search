@@ -7,7 +7,6 @@ This is a React app that interacts with the OMDb API that allows you search for 
 Make sure you have create-react-app installed
 ```
 $ npm install -g create-react-app
-$ create-react-app my-app
 ```
 Then clone or fork the repo
 ```
