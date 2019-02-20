@@ -11,7 +11,7 @@ class Search extends Component {
     }
 
     handleSubmit = (e) => {
-        const url = `http://www.omdbapi.com/?s=${this.state.value}&apikey=e183fc31`
+        const url = `http://www.omdbapi.com/?s=${this.state.value}&apikey={REACT_APP_API_KEY}`
         fetch(url)
         .then(response => response.json())
         .then(results => {
