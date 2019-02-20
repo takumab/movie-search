@@ -6,7 +6,7 @@ class Film extends Component {
     }
 
     componentDidMount() {
-        const url = "http://www.omdbapi.com/?i=tt3896198&apikey=e183fc31";
+        const url = "http://www.omdbapi.com/?i=tt3896198&apikey={REACT_APP_API_KEY}";
         fetch(url)
         .then(response => response.json())
         .then(result => {
